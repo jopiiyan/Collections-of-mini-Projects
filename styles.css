@@ -1,0 +1,291 @@
+:root {
+  --primary-color: #fdf7e7;
+  --secondary-color:  #fdf7e7;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.54;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* UTILITY CLASSES */
+.container {
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+#projects{
+  position: relative;
+}
+
+.btn {
+    text-decoration: none;
+    width: 300px;
+    height: 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    justify-self: center;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    transition: all .5s ease-in-out;
+    position: absolute;
+    bottom: 3%;
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+  
+  
+
+.btn:hover {
+  background-color: #a1785c
+}
+
+/* ABOUT PAGE */
+#about {
+  height: 100vh;
+  background-color: #a1785c;
+  color: #fdf7e7;
+}
+
+#navbar {
+  background-color: var(--primary-color);
+  padding: 0rem 3rem;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100vw;
+
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+#navbar ul a {
+  display: inline-block;
+  padding: 1.2rem 2rem;
+  text-decoration: none;
+  color: #a1785c;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#navbar ul a:hover {
+  text-decoration: underline;
+ 
+}
+
+#welcome-section h1{
+  color: white;
+  font-weight: 700;
+}
+
+#about .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  color: #eee;
+  font-weight: 100;
+}
+
+#caption {
+  color: #a1785c;
+}
+
+#projects {
+  text-align: center;
+  width: 100%;
+  padding: 7rem .1rem;
+  background-color: var(--secondary-color);
+}
+
+#projects .projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3rem;
+  grid-column-gap: 2rem;
+  margin-top: 2rem;
+}
+
+#bottom-line {
+  height: 6px;
+  background-color: #a1785c;
+  width: 55%;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+#projects .projects .box {
+  background-color: #eee;
+  border: 5px solid #eee;
+  border-radius: 3px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+
+}
+
+.img-container{
+  height: 300px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.img-container img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+#projects .projects .box a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#projects .projects .box h1{
+  position: absolute;
+  bottom: 10%; /* Adjust this value to center vertically */
+  left: 0;
+  right: 0;
+  color: black
+}
+
+/* CONTACT SECTION */
+#contact {
+  height: 80vh;
+  background-color: #a1785c;
+  color: #fdf7e7
+}
+
+#contact .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#contact .container h1 {
+  font-size: 3.4rem;
+  font-weight: bolder;
+  padding-bottom: .1rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+#contact .container p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+#contact .container .social>div a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #eee;
+  margin: 1rem 2rem;
+  font-weight: bolder;
+  transition: transform .5s;
+}
+
+#contact .container .social>div a:hover {
+  transform: translateY(-5px);
+}
+
+
+/* FOOTER SECTION */
+#main-footer {
+  border-top: solid 4px var(--primary-color);
+  padding: 1rem;
+  background-color: #fdf7e7;
+  color: #a1785c
+}
+
+#main-footer .container {
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-footer .container p {
+  font-size: 1.2rem;
+}
+
+#main-footer #creator a {
+  text-decoration: underline;
+  color: #eee;
+
+  line-height: 1.5;
+}
+
+/* SMARTPHONE */
+@media (max-width: 600px) {
+  #navbar {
+    padding: 0rem 1rem;
+    justify-content: center;
+  }
+
+  #projects .projects {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  #projects .projects .box{
+    height: 450px;
+  }
+
+
+  #contact .container p {
+    margin-bottom: 1.5rem;
+  }
+
+  #contact .container .social>div a {
+    display: block;
+    margin: 1rem 1.5rem;
+  }
+
+  #main-footer .container {
+    flex-direction: column;
+  }
+
+  #main-footer #creator {
+    margin-top: 1rem;
+  }
+}
